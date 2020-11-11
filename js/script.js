@@ -18,8 +18,10 @@ var sconto40 = (prezzo * 40) / 100;
 
 var calcolaPrezzo;
 
-
-if (età < 18) {
+if (età < 0){
+  alert("età non valida, riprova")
+}
+else if (età < 18) {
   calcolaPrezzo = prezzo - sconto20;
   document.getElementById('prezzo-biglietto').innerHTML = calcolaPrezzo;
 }
