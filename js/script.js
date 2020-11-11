@@ -6,8 +6,29 @@
 
 
 
-var km = parseInt (prompt("distanza in km?"));
+var km = parseInt(prompt("distanza in km?"));
 
 var età = parseInt(prompt("quanti anni hai?"));
 
-var prezzo = parseInt(km * 0.21);
+var prezzo = (km * 0.21);
+
+var sconto20 = (prezzo * 20) / 100;
+
+var sconto40 = (prezzo * 40) / 100;
+
+var calcolaPrezzo;
+
+
+if (età < 18) {
+  calcolaPrezzo = prezzo - sconto20;
+  document.getElementById('prezzo-biglietto').innerHTML = calcolaPrezzo;
+}
+else if (età > 65) {
+  calcolaPrezzo = prezzo - sconto40;
+  document.getElementById('prezzo-biglietto').innerHTML = calcolaPrezzo;
+}
+
+else {
+  calcolaPrezzo = prezzo;
+  document.getElementById('prezzo-biglietto').innerHTML = calcolaPrezzo;
+}

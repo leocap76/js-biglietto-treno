@@ -16,7 +16,8 @@ body{
 }
 .box {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
     height: 513px;
     width: 590px;
     background-color: white;
@@ -27,8 +28,7 @@ body{
 
 .question {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   padding: 30px;
-  width: 100%;
+  border: 2px solid black;
 }
